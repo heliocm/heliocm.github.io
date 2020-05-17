@@ -17,16 +17,15 @@ function introAnimation () {
             }
         }
         function StartTextAnimation(i) {
-            console.log(dataText[i]);
+            //console.log(dataText[i]);
             if (typeof dataText[i] == "undefined"){
                 
-                var removeIntro = new Promise((r,j)=>setTimeout(document.querySelector(".intro-content").classList.add("fading-out"),1000));
-                
-                removeIntro.then(setTimeout(document.querySelector(".intro-content").classList.add("display-none"),1000));
-                
+                document.querySelector(".intro-content").classList.add("fading-out");
+                setTimeout(()=>document.querySelector(".intro-content").classList.add("display-none"), 1000);
                 
                 document.querySelector(".menu-content").classList.remove("display-none");
-                document.querySelector(".menu-content").classList.add("fading-in")
+                document.querySelector(".menu-content").classList.add("fading-in");
+
                 // setTimeout(function() {
                 //     StartTextAnimation(0);
                 // }, 5000);

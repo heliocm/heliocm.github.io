@@ -1,12 +1,52 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 .menu {
-    background-color: #1C2541;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0B132B;
     min-width: 100vw;
     height: 100vh;
     position: fixed;
@@ -25,9 +65,36 @@
     opacity: 0;
 }
 
+.menu-content nav {
+    display: none;
+}
+.menu-content i {
+    font-size: x-large;
+    font-weight: bold;
+    padding: 13px;
+    position: absolute;
+    right: 8px;
+    top: 8px
+}
 .intro-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    border: 2px solid;
+    padding: 15px;
+    border-color:  #5BC0BE;
+    min-height: 80vh;
+    min-width: 70vw;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.intro-content h1 {
+    align-self: center;
+    margin-bottom: 5px;
+}
+
+.intro-content span {
+    margin-top: 5px;
 }
 
 
@@ -37,17 +104,14 @@
 
 @keyframes intro-to-menu {
     from {
-        background-color: #1C2541;
         min-width: 100vw;
         height: 100vh;
         position: fixed
     }
 
     to {
-        background-color: #1C2541;
         min-width: 100vw;
         height: 10vh;
-        padding: 15px;
         position: fixed;
         left: 0px;
         top: 0;
@@ -57,25 +121,33 @@
 
 @media (min-width: 600px) {
 
+    .menu-content i {
+        display:none;
+    }
+
+    .menu-content nav {
+        display: grid;
+    }
+
+    
     @keyframes intro-to-menu {
         from {
-            background-color: #1C2541;
+            background-color: #0B132B;
             min-width: 100vw;
             height: 100vh;
             position: fixed
         }
-    
+        
         to {
-            background-color: #1C2541;
-            position: fixed;
-            left: 0px;
+            background-color: #0B132B;
+            /* left: 0px; */
             min-width: 20vw;
             min-height: 100vh;
             padding: 15px;
             z-index: 1;
+            position: fixed;
         }
-    }
-
+    }  
 }
 /* .menu {
     color: whitesmoke;
@@ -91,15 +163,9 @@
     z-index: 1;
 } */
 
-.menu i {
-    padding: 3px;
-    position: absolute;
-    right: 10px;
-}
 
-.menu nav {
 
-}
+
 
 .home {
     max-width: 100vw;
@@ -140,6 +206,7 @@ span.cursor {
 
 body {
     justify-content: center;
+    background-color: #1C2541;
     font-family: 'Source Code Pro', monospace;
 }
 
@@ -156,7 +223,7 @@ paleta-de-cores {
 }
 
 .fading-out{
-
+    /* text-align: center; */
     animation: 1s linear fading-out forwards;
 }
 
