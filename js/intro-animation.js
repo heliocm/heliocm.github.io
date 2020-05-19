@@ -51,7 +51,6 @@ function introAnimation () {
                 if ((i < dataText[i].length)) {
     
                     typeWriter(dataText[i], 0, function(){
-                        console.log(i);
 
                         var animacao = document.querySelector('.intro-content');
 
@@ -103,30 +102,6 @@ function introAnimation () {
         }
         StartTextAnimation(0);
     });
-    body.addEventListener("keydown", clearEffect);
-}
-
-function clearEffect() {
-    var intro = document.querySelector(".div-intro");
-    var paragrafos = document.querySelectorAll(".terminal");
-
-    paragrafos.forEach(function(paragrafo){
-        paragrafo.remove();
-    });
-
-    var newParagrafo = document.createElement("p");
-    var span = document.createElement("span");
-    
-    newParagrafo.classList.add("terminal");
-    span.classList.add("cursor");
-
-
-    newParagrafo.textContent = "heliocm@myPortfolio:/home/heliocm $"
-    span.textContent = "_";
-
-    newParagrafo.appendChild(span);
-    intro.appendChild(newParagrafo);
-
 }
 
 introAnimation();
