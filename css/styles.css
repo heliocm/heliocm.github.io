@@ -191,6 +191,20 @@ a {
     height: 100vh;
 }
 
+.about a,
+.projects a,
+.contact a{
+    text-decoration: underline;
+    transition: text-shadow .3s ease-in-out;
+}
+
+.about a:hover,
+.projects a:hover,
+.contact a:hover {
+    text-shadow: 0px 0px 10px #6FFFE9;
+
+}
+
 .home {
     background: linear-gradient(to bottom, rgba(11, 19, 43, 0.75), rgba(28, 37, 65, 0.75)), url('../images/helio-bg.jpg'); 
     background-color: #5BC0BE;
