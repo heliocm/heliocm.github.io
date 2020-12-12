@@ -225,6 +225,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-top: -2em;
     height: 95%;
     width: 85%;
     color: #5BC0BE;
@@ -262,15 +263,20 @@ section {
 }
 
 .content .perfil {
-    float: right;
+    /* float: right; */
+    display: inline-grid;
+    grid-template-columns: 75% 25%;
+    column-gap: 2em;
+    align-content: center;
+    justify-content: center;
 }
 
 .content .perfil img{
-    width: 10em;
-    height: 10em;
+    width: 12em;
+    height: 12em;
     object-fit: cover;
     object-position: 0 -30px;
-    margin: 25px;
+    margin-top: -1em;
 }
 
 @keyframes intro-to-menu {
