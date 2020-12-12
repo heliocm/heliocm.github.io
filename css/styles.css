@@ -218,14 +218,14 @@ section {
 }
 
 .itens {
-    display: flex;
-    justify-content: space-between;
+    display: inline-grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
 }
 .content {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 80%;
+    height: 95%;
     width: 85%;
     color: #5BC0BE;
 }
@@ -358,7 +358,7 @@ section {
 
 p {
     color: #5BC0BE;
-    margin-top: 2em;
+    /* margin-top: 2em; */
 }
 
 
